@@ -5,7 +5,7 @@ const initialState = {
 
 const psNotifierReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "RETRIEVE_CONTENT":
+    case "SET_CONTENT":
       return {
         ...state,
         content: action.payload
