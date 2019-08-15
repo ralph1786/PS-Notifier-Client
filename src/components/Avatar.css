@@ -10,3 +10,9 @@
   font-size: 3em;
   font-weight: bold;
 }
+
+.user_avatar:hover {
+  background: rgb(68, 68, 68);
+  cursor: pointer;
+  transition: background 0.6s ease-in;
+}
