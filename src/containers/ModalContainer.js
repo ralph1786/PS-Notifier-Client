@@ -32,7 +32,11 @@ const modalStyling = {
     marginRight: "-50%",
     height: "800px",
     width: "800px",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -50%)",
+    webkitboxShadow: "8px 9px 10px 4px rgba(119,116,116,0.75)",
+    mozboxShadow: "8px 9px 10px 4px rgba(119,116,116,0.75)",
+    boxShadow: "8px 9px 10px 4px rgba(119,116,116,0.75)",
+    borderRadius: "15px"
   }
 };
 
