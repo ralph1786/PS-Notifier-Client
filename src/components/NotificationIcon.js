@@ -7,7 +7,7 @@ function NotificationIcon(props) {
   return (
     <div>
       <button onClick={props.openModal} className="notification_icon">
-        {props.content === null ? 0 : 2}
+        {props.content ? props.content.split("\n\n").length - 1 : 0}
       </button>
     </div>
   );
