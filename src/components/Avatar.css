@@ -9,6 +9,7 @@
   color: white;
   font-size: 3em;
   font-weight: bold;
+  outline: none;
 }
 
 .user_avatar:hover {
