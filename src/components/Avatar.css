@@ -1,0 +1,12 @@
+.user_avatar {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+}
