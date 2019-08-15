@@ -1,19 +1,23 @@
 import React, { Fragment } from "react";
+import "./ModalContainer.css";
 import { connect } from "react-redux";
 import Modal from "react-modal";
 import { closeModal } from "../reduxStore/actions/actions";
+import ReactMarkdown from "react-markdown";
 
 function ModalContainer(props) {
+  console.log(props.content);
   return (
     <Fragment>
       <Modal
         isOpen={props.isModalOpen}
-        // onRequestClose={this.closeModal}
         style={modalStyling}
         ariaHideApp={false}
       >
-        <button onClick={props.closeModal}>X</button>
-        <h2>Hello from modal</h2>
+        <button className="btn_close" onClick={props.closeModal}>
+          X
+        </button>
+        <ReactMarkdown source={props.content} className="markdown_container" />
       </Modal>
     </Fragment>
   );
@@ -26,13 +30,16 @@ const modalStyling = {
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
+    height: "800px",
+    width: "800px",
     transform: "translate(-50%, -50%)"
   }
 };
 
 const mapStateToProps = state => {
   return {
-    isModalOpen: state.isModalOpen
+    isModalOpen: state.isModalOpen,
+    content: state.content
   };
 };
 
