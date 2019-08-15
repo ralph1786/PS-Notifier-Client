@@ -1,3 +1,12 @@
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .user_avatar {
   position: absolute;
   top: 15%;
@@ -10,6 +19,7 @@
   font-size: 3em;
   font-weight: bold;
   outline: none;
+  animation: FadeIn 1s ease-in;
 }
 
 .user_avatar:hover {

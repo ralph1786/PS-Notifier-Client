@@ -1,3 +1,12 @@
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .notification_icon {
   position: absolute;
   top: 14.5%;
@@ -10,6 +19,7 @@
   font-size: 1em;
   font-weight: bold;
   outline: none;
+  animation: FadeIn 1s ease-in;
 }
 
 .notification_icon:hover {
