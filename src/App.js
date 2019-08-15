@@ -14,18 +14,22 @@ class App extends Component {
     return (
       <Fragment>
         <Avatar />
-        <NotificationIcon />
+        {this.props.content ? <NotificationIcon /> : null}
         <ModalContainer />
       </Fragment>
     );
   }
 }
 
+const mapStateToProps = state => ({
+  content: state.content
+});
+
 const mapDispatchToProps = dispatch => ({
   fetchContent: () => dispatch(fetchContent())
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);
